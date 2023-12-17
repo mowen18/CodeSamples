@@ -2,4 +2,4 @@
 **These are just a handful of many more projects, more examples will continue to be committed to this repo** 
 
 "QLearning" = Traditional reinforcement/self-learning implementation
-"GAN" = Generative and Adversarial network. See GIF file.
+"GAN" = Generative and Adversarial networks. Aka deep learning and image generation using Tensorflow + Python. See GIF file in folder.
