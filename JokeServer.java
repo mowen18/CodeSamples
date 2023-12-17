@@ -597,22 +597,4 @@ Press enter key to change mode, or type quit
 Mode set to: Joke
 Press enter key to change mode, or type quit
 
-
-
- */
-
-/*
-D2L POST (reply) 1:
-I have my main data structures on the server. For the client class, I have member variables (such as the clients name, a unique identifier, etc.) which get serialized over to the server.
-I used a rng to act as an uuid for the client, which I use as a key for hashmaps stored in the server. The key is mapped to a value which represents the four jokes/proverbs; the value also
-indicates which of the four have, and haven't, been viewed by the client. This value gets updated each time a joke or proverb is sent to the client, and then after all four jokes or proverbs
-have been viewed (i.e. cycle incurred) the value gets reset s.t. all jokes/proverbs become available again. My randomization/shuffling of available jokes or proverbs occurs on the server
-side, but I'm sure there are many ways to do this. I'm not finished yet, but that's the basic design of my current implementation. I think the changes that you made in your implementation make sense.
-
-D2L POST (reply regarding shuffling/randomization) 2:
-Thanks for the tip, I totally forgot about Collections.shuffle(). Definitely saved me some time, much appreciated!
-
-D2L POST (reply) 3:
-Good suggestion! I've watched a few of the videos in this playlist before, and they do a great job explaining java socket programming fundamentals.
-
  */
