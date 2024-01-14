@@ -1,3 +1,4 @@
+#gym is/was a library of environments developed by OpenAI purposed fortraining r-learning agents
 import gym
 import matplotlib.pyplot as plt
 import numpy as np
