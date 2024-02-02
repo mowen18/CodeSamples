@@ -8,7 +8,7 @@
  *---									---*
  *---	----	----	----	----	----	----	----	----	---*
  *---									---*
- *---	Version 1a		2020 November 3	Prof. Joseph Phillips	---*
+ *---	Version 1a	2020 November 3	      Prof. Joseph Phillips	---*
  *---									---*
  *-------------------------------------------------------------------------*/
 
@@ -40,7 +40,6 @@ struct Node *makeList()
 
     while (1)
     {
-        //  YOUR CODE HERE
         printf("Enter integer (or %s) to quit: ", STOP_CMD);
         fgets(line, LINE_LEN, stdin);
 
@@ -72,7 +71,6 @@ void append(struct Node **beginHandle,
             struct Node **endHandle,
             struct Node *nodePtr)
 {
-    //  YOUR CODE HERE
     struct Node *next = (struct Node *)malloc(sizeof(struct Node));
     
     if(*beginHandle == NULL)
@@ -109,13 +107,11 @@ void split(struct Node *source,
 
     while (source != NULL)
     {
-        //  YOUR CODE HERE
         next = source->nextPtr_;
         append(sublist0Handle,&end0,source);
         if(next==NULL)
             break;
         source = next;
-        
         next = source->nextPtr_;
         append(sublist1Handle,&end1,source);
         if(next==NULL)
@@ -128,8 +124,6 @@ void split(struct Node *source,
             break;
         source = next;
         
-        
-
     }
 }
 
@@ -140,7 +134,6 @@ void print(const char *textCPtr,
 {
     const struct Node *run;
 
-    //  YOUR CODE HERE
     printf("%s\n",textCPtr);
     for (run = list; run != NULL; run = run->nextPtr_)
     {
@@ -153,7 +146,6 @@ void print(const char *textCPtr,
 //	No return value.
 void release(struct Node *list)
 {
-    //  YOUR CODE HERE
     if(list==NULL)
         return;
     
@@ -167,9 +159,6 @@ void release(struct Node *list)
 int main(int argc,
          char *argv[])
 {
-    //  I.
-
-    //  II.  :
     struct Node *list;
     struct Node *list0;
     struct Node *list1;
@@ -187,6 +176,5 @@ int main(int argc,
     release(list1);
     release(list2);
 
-    //  III.  Finished:
     return (EXIT_SUCCESS);
 }
