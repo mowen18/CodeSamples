@@ -7,7 +7,6 @@ public class PathFinder : MonoBehaviour
 {
     private static PathFinder instance;
     private static GameObject[] pathNodes;
-    //public PathNode pathnode;
     public PathNode startposition;
     public PathNode endPosition;
     List<PathNode> pNodes;
@@ -70,24 +69,18 @@ public class PathFinder : MonoBehaviour
 
     public static List<PathNode> FindPath(PathNode start, PathNode goal)
     {
-        //PathNode targetNode = FindClosestNodeToTarget(goal.transform.position);
         List<PathNode> OpenList = new List<PathNode>();
         HashSet<PathNode> ClosedList = new HashSet<PathNode>();
         OpenList.Add(start);
-        //blackBoard_Player = survivor_AI.GetBlackboard();
     
-       // /blackBoard_Player.currentNode = start; new
-       // /blackBoard_Player.targetNode = goal; new
         while (OpenList.Count > 0)
         {
             PathNode currentNode = OpenList[0];
-            //blackBoard_Player.currentNode = currentNode;
             for (int i = 1; i < OpenList.Count; i++)
             {
                 if (OpenList[i].FCost < currentNode.FCost || OpenList[i].FCost == currentNode.FCost && OpenList[i].ihCost < currentNode.ihCost)
                 {
                     currentNode = OpenList[i];
-                    // /blackBoard_Player.currentNode = currentNode;
                 }
             }
             OpenList.Remove(currentNode);
