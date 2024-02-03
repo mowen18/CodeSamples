@@ -1,1 +1,1 @@
-Not intended to reflect my best work, just some sample work. Additional files will continue to be added
+Not intended to reflect my best work, just some samples - mostly from M.S. in CS program. Additional files will continue to be added
