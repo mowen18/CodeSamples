@@ -54,11 +54,9 @@ public class PathFinder : MonoBehaviour
            
             
             endPosition = FindClosestNodeToTarget(loot[0].transform.position);
-            //endPosition = pathnode;
             startposition = FindClosestNodeToTarget(survivor_AI.transform.position);
             blackBoard_Player.startNode = startposition;
             blackBoard_Player.targetNode = endPosition;
-            //endPosition = pathnode;
             pNodes = FindPath(startposition, endPosition);
             Debug.Log(pNodes);
             blackBoard_Player.pathNodes = pNodes;
@@ -98,7 +96,6 @@ public class PathFinder : MonoBehaviour
                 }
                 
                 FinalPath.Reverse();//Reverse the path to get the correct order
-                // /blackBoard_Player.currentPath = FinalPath;
                 return FinalPath; //Set the final path
             }
             foreach(PathNode neighbor in currentNode.neighbors)
